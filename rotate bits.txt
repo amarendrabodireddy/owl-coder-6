@@ -1,0 +1,9 @@
+class Solution:
+    def reversedBits(self, X):
+        # code here 
+        convert = bin(X)
+        slice_of = convert[2:]
+        now = slice_of.zfill(32)
+        again_convert = now[::-1]
+        result = int(again_convert,2)
+        return result
